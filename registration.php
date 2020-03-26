@@ -24,6 +24,7 @@ if(isset($_POST)){
   $headers = "From:" . $from;
 
   mail($to,$subject,$message,$headers);
+  mail('niina@46elks.com',$subject,$message,$headers);
   header('Location: /#klar');
   }
 ?>
