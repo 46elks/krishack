@@ -123,9 +123,16 @@ p {
   margin-bottom: 2rem;
 }
 
-#engagera-dig-i-hacket {
+#engagera-dig-i-hacket,
+#resurser {
   max-width: 640px;
   margin: 13vh auto 2rem;
+}
+
+#engagera-dig-i-hacket h2,
+#resurser h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0;
 }
 
 #klar {
@@ -138,4 +145,12 @@ p {
 
 #klar:target ~ * {
   display: none
+}
+
+h3 {
+  margin-bottom: 2px;
+}
+
+p {
+  margin-top: 2px;
 }
