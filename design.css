@@ -135,16 +135,8 @@ p {
   margin-bottom: 0;
 }
 
-#klar {
-  display: none;
-}
-
-#klar:target {
-  display: block
-}
-
-#klar:target ~ * {
-  display: none
+#join #klar h3 {
+  margin-top: 0;
 }
 
 h3 {
