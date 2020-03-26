@@ -25,9 +25,6 @@
     <p>Pågår nu och fortsätter tills krisen är över.</p>
 
     <div id="join">
-      <div id="klar">
-        <h3>Intresseanmälan mottagen</h3>
-        <p>Inbjudan till slacken kommer snart.</p></div>
       <h2>Kom igång</h2>
       <p>Läs igenom <a href="/du-kan">förslag</a> på hur du kan agera solidariskt med din omgivning i praktiken.</p>
 
@@ -146,6 +143,36 @@
     <h3>Slacken</h3>
     <p><a href="https://app.slack.com/client/T010GDG4DGT/C010TS1FCH3">krishack-slacken</a></p>
   </div>
-
+  <script type="text/javascript">
+      (function(){
+      // Genom att anropa med XHR får vi litet CORS-policy gratis.
+      const klar_skylt = '<div id="klar"><h3>Intresseanmälan mottagen</h3><p>Inbjudan till slacken kommer snart.</p></div>',
+            join_div = document.getElementById('join'),
+            anslut_form = document.getElementById('anslut'),
+            anslut_resp = function(e){
+                if(e.target.readyState === 4 && 
+                   e.target.status === 200) {
+                   join_div.innerHTML = klar_skylt;
+                }
+            },
+            anslut_sand = function(e){
+                // Enklast tänkbara "validering"
+                // Nekar vid tomt namnfält och då båda kontaktfälten är tomma
+                let valid = (anslut_form.elements.participant_name.value.trim().length > 0 && 
+                            (anslut_form.elements.participant_email.value + 
+                             anslut_form.elements.participant_phone.value).trim().length > 0); 
+                if (valid){
+                    let data = new FormData(anslut_form), 
+                        rq = new XMLHttpRequest();
+                    rq.onload = anslut_resp;
+                    rq.open('POST', '/registration');
+                    rq.send(data);
+                } else {
+                    // todo?  Spegla felaktiga uppgifter i formuläret.
+                }
+                e.preventDefault();
+            };
+      anslut_form.addEventListener('submit', anslut_sand);})();
+  </script>
 </body>
 </html>
