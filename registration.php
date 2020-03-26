@@ -33,4 +33,3 @@ if(isset($_POST) && $ref_ok){
   mail($to,$subject,$message,$headers);
   mail('niina@46elks.com',$subject,$message,$headers);
   }
-  
