@@ -5,8 +5,8 @@ header('Access-Control-Allow-Origin: https://krishack.se');
 // ORIGIN är ett aningen "pålitligare" värde att kontrollera än HTTP_REFERER
 // Antar att ambitionen är att undvika att använda kakor (enda totalt effektiva sättet att förhindra spam/csrf).
 
-$referer = isset($_SERVER['ORIGIN']) && is_string($_SERVER['ORIGIN']) ? $_SERVER['ORIGIN'] : '';
-$ref_ok = preg_match ('/^https:\/\/krishack.se/', $referer) === 1;
+$referer = isset($_SERVER['HTTP_ORIGIN']) && is_string($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
+$ref_ok = preg_match ('/^http:\/\/krishack.se/', $referer) === 1;
 
 if(isset($_POST) && $ref_ok){
 
