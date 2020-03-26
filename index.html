@@ -26,10 +26,10 @@
 
     <div id="join">
       <h2>Kom igång</h2>
-      <p>Läs igenom <a href="/du-kan">förslag</a> på hur du kan agera solidariskt med din omgivning i praktiken.</p>
+      <p>Läs igenom <a href="#solidariskt">förslag</a> på hur du kan agera solidariskt med din omgivning i praktiken.</p>
 
       <h3>Anslut till hacket</h3>
-      <form action="/registration" method="POST">
+      <form action="/registration" method="POST" id="anslut">
         <div class="input">
           <input type="text" name="participant_name" placeholder="Förnamn Efternamn">
           <svg class="svg-inline--fa fa-user fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
@@ -72,6 +72,16 @@
     </summary>
     <h3>Sjukvårdshjäpen</h3>
     <p>Samlar in material till sjukvården. Om du t.ex. har något att donera, vänd dig till <a href="https://www.facebook.com/groups/494650038080423/">sjukvårdshjälpen</a> på facebook. Där finns individer som arbetar inom vården och har kontakt med de som är ansvariga för att ta emot material på sjukhusen och hos andra vårdinstanser.</p>
+
+    <h3>We fight covid</h3>
+    <p style="margin-bottom: 0"><a href="https://wefightcovid.org/">wefightcovid.org</a> har flera initiativ.</p>
+    <ul>
+      <li>Samordna transporter av sjukvårdspersonal.</li>
+      <li>Koordinera volontärer.</li>
+      <li>Matleveranser till sjukvårdspersonal.</li>
+      <li>Övervakning: Utveckla metoder för att långsiktigt och frivilligt kontrollera smittspridning</li>
+    </ul>
+
   </details>
 
   <details class="more-info">
@@ -86,22 +96,39 @@
 
   <details class="more-info">
     <summary>
-      <h2>Topp 10 behoven just nu</h2>
+      <h2>10 viktiga behov just nu</h2>
     </summary>
-    <p>Vilka är de viktigaste behoven som vården, myndigheter, individer och småföretagare har just nu som vi skulle kunna göra något åt?</p>
+    <p>Vilka viktiga behov har vården, myndigheter, individer och småföretagare just nu som vi skulle kunna göra något åt?</p>
+    <p>Du kan också engagera dig i att plocka fram detta! Kom med i slacken och synka med andra som redan kommit igång med att höra av sig till myndigheter bl.a.</p>
     <ul>
-      <li>#1  - Vi väntar på svar</li>
-      <li>#2  - Vi väntar på svar</li>
-      <li>#3  - Vi väntar på svar</li>
-      <li>#4  - Vi väntar på svar</li>
-      <li>#5  - Vi väntar på svar</li>
-      <li>#6  - Vi väntar på svar</li>
-      <li>#7  - Vi väntar på svar</li>
-      <li>#8  - Vi väntar på svar</li>
-      <li>#9  - Vi väntar på svar</li>
-      <li>#10 - Vi väntar på svar</li>
+      <li>#1 "IT-hjälp" önskas hos flera myndigheter. Det är ännu oklart vad som menas med det.</li>
+      <li>#2  Transport av matvaror. Många har över en veckans väntetid om de väljer att beställa hem matleverans för att kunna stanna hemma och frivilligt isolera sig när en känner sig förkyld.</li>
+      <li>#3  - Kom med förslag</li>
+      <li>#4  - Kom med förslag</li>
+      <li>#5  - Kom med förslag</li>
+      <li>#6  - Kom med förslag</li>
+      <li>#7  - Kom med förslag</li>
+      <li>#8  - Kom med förslag</li>
+      <li>#9  - Kom med förslag</li>
+      <li>#10 - Kom med förslag</li>
     </ul>
   </details>
+
+  <div id="solidariskt" class="more-info">
+    <h2>Agera solidariskt? Hur då?</h2>
+
+    <h3>Ring och prata med äldre och andra personer som ingår i riskgruppen.</h3>
+    <p>De ska hålla sig hemma, och att få prata med en vänlig själ kan motverka känslan av att vara ensam.</p>
+
+    <p>Om du känner dig frisk, eller i varje fall inte alls förkyld, då kan du:</p>
+    <h3>Köp takeaway mat hos lokala restaurangen om du har råd.</h3>
+    <p>Restauranger drabbas hårt och det är en tuff branch att vara i även utan kris. Matvaror går till spillo och höga hyran för en lokal som du ofta har ett flerårskontrakt på ska betalas ... <br>
+
+    <h3>Erbjuda dig att hjälpa äldre och andra i ditt närområde att leverera matvaror till deras dörr om de känner sig sjuka eller oroliga.</h3>
+
+    <h3>Har du fler förslag på hur en kan agera solidariskt?</h3>
+    <p>Maila gärna <a href="mailto:niina@46elks.com">Niina</a> eller kom med en <a href="https://github.com/46elks/krishack">PR på github</a>.</p>
+  </div>
 
   <div id="projekt" class="more-info">
     <h2>Projekt</h2>
@@ -139,7 +166,7 @@
             join_div = document.getElementById('join'),
             anslut_form = document.getElementById('anslut'),
             anslut_resp = function(e){
-                if(e.target.readyState === 4 && 
+                if(e.target.readyState === 4 &&
                    e.target.status === 200) {
                    join_div.innerHTML = klar_skylt;
                 }
@@ -147,11 +174,11 @@
             anslut_sand = function(e){
                 // Enklast tänkbara "validering"
                 // Nekar vid tomt namnfält och då båda kontaktfälten är tomma
-                let valid = (anslut_form.elements.participant_name.value.trim().length > 0 && 
-                            (anslut_form.elements.participant_email.value + 
-                             anslut_form.elements.participant_phone.value).trim().length > 0); 
+                let valid = (anslut_form.elements.participant_name.value.trim().length > 0 &&
+                            (anslut_form.elements.participant_email.value +
+                             anslut_form.elements.participant_phone.value).trim().length > 0);
                 if (valid){
-                    let data = new FormData(anslut_form), 
+                    let data = new FormData(anslut_form),
                         rq = new XMLHttpRequest();
                     rq.onload = anslut_resp;
                     rq.open('POST', '/registration');
