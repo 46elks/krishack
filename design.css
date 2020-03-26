@@ -1,0 +1,141 @@
+body {
+  background: #26262b;
+  color: #fff;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  min-height: 6rem;
+}
+
+a {
+  color: #fff;
+}
+
+header a:last-child {
+  float: right;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+h1 + p {
+  margin: 9px 0 2px;
+  color: hsla(0,0%,100%,.6);
+}
+
+h1 + p + p {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+#join {
+  background: #333;
+  max-width: 340px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 1.8rem 2rem;
+  text-align: left;
+  border: 1px solid #444;
+}
+
+#join h2 {
+  margin:0;
+  color: hsla(0,0%,100%,.6);
+  font-weight: 400;
+}
+
+#join h2 + p {
+  margin: 2px 0;
+  color: hsla(0,0%,100%,.6);
+}
+
+#join h2 + p a {
+  color: hsla(0,0%,100%,.66);
+}
+
+#join h3 {
+  font-weight: 700;
+  margin: 1.3rem 0 3px;
+}
+
+#join input {
+  width: 100%;
+  margin: 0 0 .6rem;
+  padding: 5px 5px 5px 35px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+#join .input {
+  position: relative;
+}
+
+#join .input svg {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  max-width: 1rem;
+  color: #999;
+}
+
+#join .input:nth-of-type(2) svg {
+  top: 11px;
+}
+
+#join .input:nth-of-type(3) svg {
+  top: 10px;
+}
+
+#join .input:nth-of-type(3) input {
+  padding-left: 33px;
+}
+
+#join p:last-child {
+  margin-bottom: 0;
+}
+
+#gdpr {
+  font-size: .80rem;
+}
+
+
+#more-info {
+  max-width: 640px;
+  margin: 5rem auto 2rem;
+  line-height: 140%;
+}
+
+#more-info p {
+  margin-bottom: 2rem;
+}
+
+#engagera-dig-i-hacket {
+  max-width: 640px;
+  margin: 13vh auto 2rem;
+}
+
+#klar {
+  display: none;
+}
+
+#klar:target {
+  display: block
+}
+
+#klar:target ~ * {
+  display: none
+}
