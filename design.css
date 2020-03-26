@@ -113,26 +113,24 @@ p {
 }
 
 
-#more-info {
+.more-info {
   max-width: 640px;
   margin: 5rem auto 2rem;
   line-height: 140%;
 }
 
-#more-info p {
+.more-info p {
   margin-bottom: 2rem;
 }
 
-#engagera-dig-i-hacket,
-#resurser {
+.more-info {
   max-width: 640px;
   margin: 13vh auto 2rem;
 }
 
-#engagera-dig-i-hacket h2,
-#resurser h2 {
+.more-info h2 {
   font-size: 2.8rem;
-  margin-bottom: 0;
+  margin-bottom: 28px;
 }
 
 #klar {
