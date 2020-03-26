@@ -152,3 +152,6 @@ h3 {
 p {
   margin-top: 2px;
 }
+
+details summary { cursor: pointer; }
+details summary h2 { display: inline; }
