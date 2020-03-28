@@ -1,3 +1,5 @@
+html {scroll-behavior: smooth;}
+
 body {
   background: #26262b;
   color: #fff;
@@ -135,6 +137,10 @@ p {
   margin-bottom: 28px;
 }
 
+.more-info h3:not(:first-of-type) {
+  margin-top: 3.3rem;
+}
+
 #join #klar h3 {
   margin-top: 0;
 }
@@ -145,3 +151,6 @@ h3 {
 
 details summary { cursor: pointer; }
 details summary h2 { display: inline; }
+
+#solidariskt:target { padding-top: 3rem; }
+
